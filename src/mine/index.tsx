@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, Button } from "react-native";
 
 type Iprops = {};
 
 const Mine = (props: any) => {
   console.log(props);
+
+  useEffect(() => {
+    console.log('Mine挂载...');  
+  }, [])
 
   return (
     <View>
@@ -20,11 +24,6 @@ const Mine = (props: any) => {
             title: "你的不是我的",
           })
         }
-      />
-
-      <Button
-        title="进入抽屉"
-        onPress={() => props.navigation.navigate("drawer")}
       />
     </View>
   );

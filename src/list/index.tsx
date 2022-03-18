@@ -7,8 +7,6 @@ import {
   useFocusEffect,
 } from "@react-navigation/native";
 
-type Iprops = {};
-
 const List = ({ navigation, route }: any) => {
   const [val, setVal] = useState<number>(1);
 
@@ -26,9 +24,12 @@ const List = ({ navigation, route }: any) => {
     }, [val])
   );
 
-  console.log(route, 'route...');
+  useEffect(() => {
+    console.log('List挂载...');  
+  }, [])
 
   useEffect(() => {
+    
     const focus = navigation.addListener("focus", () => {
       console.log("focus...");
     });
