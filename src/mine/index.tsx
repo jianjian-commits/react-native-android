@@ -11,13 +11,20 @@ const Mine = (props: any) => {
       <Text>Mine</Text>
       <Button
         title="返回首页"
-        onPress={() => props.navigation.navigate('home')}
+        onPress={() => props.navigation.navigate("home")}
       />
       <Button
         title="修改标题"
-        onPress={() => props.navigation.setOptions({
-            title: '你的不是我的'
-        })}
+        onPress={() =>
+          props.navigation.setOptions({
+            title: "你的不是我的",
+          })
+        }
+      />
+
+      <Button
+        title="进入抽屉"
+        onPress={() => props.navigation.navigate("drawer")}
       />
     </View>
   );
